@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* background colors*/
+  --tooltip-bg-color-b1: #2E3138;
+  --modal-bg-color-b2: #484C54;
+  --disabled-bg-color-b3: #C0C4CE;
+  --icon-bg-color-b4: #DFE1E7;
+  --table-header-bg-color-b5: #EAECEF;
+  --nav-bg-color-b6: #F3F5F6;
+  --malm-bg-color-b7: #F9FAFA;
+  --panel-card-bg-color-b8: #FFFFFF;
+  --pane-card-bg-hover-b7:#F2F0FF;
+  --primary-bg-color-b9: #2759E5;
+  --hover-bg-color-b10: #3A68E7;
+  --selected-bg-color-b11: #EDF0FD;
+  --danger-bg-color-b12: #E30000;
+  --hover-bg-color-b13: #FF0018;
+
+  /* fonts colors*/
+  --title-f1: #121314;
+  --body-f2: #656C7B;
+  --help-f3: #989FAE;
+  --disabled-f4: #AEB4C1;
+  --sec-disabled-f5: #C0C4CE;
+  --button-f6:x #FFFFFF;
+  --link-f7: #2759E5;
+  --group-button-f8: #3A68E7;
+  --d-default-f9: #E30000;
+  --d-hover-f10: #FF0018;
+
+
+  /* outline colors*/
+  --secondary-hover-o1: #1A191E;
+  --default-o2: #3F3D49;
+  --disabled-o3: #C0C4CE;
+  --seperator-o4: #DFE1E7;
+  --white-o5: #FFFFFF;
+  --primary-o6: #2759E5;
+  --hover-o7: #3A68E7;
+  --default-o8: #E30000;
+  --hover-o9: #FF0018;
+
+   /* icons colors*/
+   --sec-hover-i1: #2E3138;
+   --secondary-i2: #989FAE;
+   --disabled-i3: #C0C4CE;
+   --white-i4: #FFFFFF;
+   --primary-i5: #2759E5;
+   --group-button-i6: #3A68E7;
+   --selected-i7: #EDF0FD;
+   --d-default-i8: #E30000;
+   --d-hover-i9: #FF0018;
+
+    /* Semantics colors*/
+    --success-s11: #40C057;
+    --success-bg-s12: #D3F9D8;
+    --success-stroke-s13: #FFFFFF;
+    --info-s21: #228BE6;
+    --info-bg-s22: #C5F6FA;
+    --info-stroke-s23: #FFFFFF;
+    --alert-s31: #E5A000;
+    --alert-bg-s32: #FFF3BF;
+    --alert-stroke-s33: #FFFFFF;
+    --error-s41: #FF6A5E;
+    --error-bg--s42: #FFE5E3;
+    --error-stroke-s43: #FFFFFF;
+
+     /* Case status & highlights colors*/
+     --new-h1: #8CE99A;
+     --assigned-h2: #74C0FC;
+     --on-hold-h3: #FFE066;
+     --updated-h4: #FAA2C1;
+     --completed-h5: #C0C4CE;
+     --evidence-h6: #E1F6FE;
+     --evidence-hover-h7: #B5EDED;
+     --highlighter-h8: #FFE7B8;
+     --misc-selected: #3C4049;
+
+
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* font-family: "IBM Plex Sans" !important; */
+  font-size: 14px;
+  background: var(--panel-card-bg-color-b8);
+  letter-spacing: 0.2px;
+}
+
+body * {
+  box-sizing: border-box
+}
+
+
+/* @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('IBM Plex Sans'),
+    local('IBMPlexSans'),
+    url('~@ibm/plex/IBM-Plex-Sans/fonts/split/woff2/IBMPlexSans-Regular-Latin1.woff2') format('woff2');
+    unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2212, U+FB01-FB02;
+} */
+
+p {
+  margin: 0;
+  padding: 0
+}
+button {
+  outline: none !important;
+}
+
+.blackBtn {
+  background: var(--link-f7) !important;
+  color: #ffffff !important;
+}
+
+
+.blackBtn:disabled {
+  background: var(--disabled-i3) !important;
+}
+
+.pinkBtn {
+  background-color: var(--link-f7) !important;
+  color: white;
+}
+
+.grayBtn {
+  border: 1px solid #DFE1E7 !important;
+  border-radius: 4px ;
+  background-color: var(--panel-card-bg-color-b8);
+  box-shadow: none ;
+  padding: 0px 30px ;
+}
+.blueBtn{
+  border: 1px solid #DFE1E7 !important;
+  border-radius: 4px ;
+  background-color: var(--link-f7);
+  box-shadow: none ;
+}
+
+.smallBtn {
+  line-height: 26px !important;
+}

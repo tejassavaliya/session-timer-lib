@@ -1,0 +1,41 @@
+.session-timer-dialog-container {
+  padding: 24px;
+}
+.assignActionBtns button {
+	float: right;
+	margin: 0 0 0 12px;
+	height: 30px;
+	line-height: 2;
+	border-radius: 4px !important;
+}
+
+
+
+.messageContainer {
+	display: flex;
+}
+
+.warningIcon {
+	display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.warningIcon .mat-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 48px;
+	width: 48px;
+	font-size: 43px;
+}
+
+.messageTextContainer {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+

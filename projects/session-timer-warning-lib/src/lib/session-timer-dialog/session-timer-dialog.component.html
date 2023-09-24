@@ -1,0 +1,19 @@
+<div class="session-timer-dialog-container">
+  <h2 mat-dialog-title>{{data?.title || 'Your session is about to expire!' }}</h2>
+  <div class="messageContainer">
+    <div class="warningIcon">
+        <mat-icon><span class="material-symbols-outlined">warning</span></mat-icon>
+    </div>
+    <div class="messageTextContainer">
+        <mat-dialog-content>
+          <p>{{ 'You will logged out in '+ timerText }} </p>
+          <p> Do you want to stay singned in? </p>
+        </mat-dialog-content>
+    </div>
+  </div>
+  <hr>
+  <mat-dialog-actions>
+    <!--<button mat-flat-button color="primary" mat-button [mat-dialog-close]="true" cdkFocusInitial>Yes</button>  <button mat-flat-button mat-dialog-close>No</button>-->
+    <div class="assignActionBtns">    <button mat-flat-button class="blackBtn" [mat-dialog-close]="true">{{data?.buttonLabel.yes}}</button>    <button class="grayBtn margin-right-8" mat-flat-button mat-dialog-close>{{data?.buttonLabel.no}}</button>  </div>
+  </mat-dialog-actions>
+</div>
