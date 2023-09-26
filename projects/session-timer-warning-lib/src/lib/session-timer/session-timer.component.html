@@ -1,5 +1,8 @@
-<p>Session timer component works !!</p>>
+<div class="session-timer"
+[ngClass]="{
+  'hideTimer' : !isShowTimer
+}"
 
-<div class="session-timer" style="display: block;">{{displayTime?.hours}}h {{displayTime?.minutes}}m {{displayTime?.seconds}}s</div>
+>{{displayTime?.hours}}h {{displayTime?.minutes}}m {{displayTime?.seconds}}s</div>
 
-<button mat-button>Click here...</button>
+

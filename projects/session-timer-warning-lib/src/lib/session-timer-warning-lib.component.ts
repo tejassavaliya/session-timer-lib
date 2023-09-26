@@ -8,5 +8,7 @@ import { Component, Input } from '@angular/core';
 
 
 export class SessionTimerWarningLibComponent {
-
+  @Input() totalDurationminutes: any; // AppConfig.totalDurationminutes
+  @Input() warningDurationMinutes: any; // AppConfig.warningDurationMinutes;
+  @Input() isShowTimer: boolean = false;
 }

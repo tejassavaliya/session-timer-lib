@@ -1,24 +1,81 @@
-# SessionTimerWarningLib
+## DESCRIPTION
+Angular (Latest Version) **User Idle / Session Timout Warning Popup** detector service. It's a straight forward **user idle / No Activity / session timout** detector for Angular. You can use this for session timeout package, user idle restriction after a period of time etc..
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
-## Code scaffolding
+## INSTALLATION
+```sh
+npm i session-timer-warning-lib
+```
 
-Run `ng generate component component-name --project session-timer-warning-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project session-timer-warning-lib`.
-> Note: Don't forget to add `--project session-timer-warning-lib` or else it will be added to the default project in your `angular.json` file. 
+## How to use angular idle detector in your angular app
 
-## Build
+### API List
+1. **sessionLogout$** - This subject will notify you, when you need to reset your timer or logout your application.
 
-Run `ng build session-timer-warning-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
 
-After building your library with `ng build session-timer-warning-lib`, go to the dist folder `cd dist/session-timer-warning-lib` and run `npm publish`.
+## Sample Code for Angular Session Timer Warning Popup
 
-## Running unit tests
+### app.module.ts - Import the SessionTimerWarningLibModule in your module
 
-Run `ng test session-timer-warning-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-## Further help
+import { AppComponent } from './app.component';
+import { SessionTimerWarningLibModule } from 'session-timer-warning-lib';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    SessionTimerWarningLibModule // Import SessionTimerWarningLibModule
+  ],
+  providers: [], 
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+
+### app.component.ts - Import the SessionTimerService in your component
+
+```typescript
+import { Component } from '@angular/core';
+import { SessionTimerService } from 'session-timer-warning-lib'; // import SessionTimerService to your component
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+  constructor(private sessionTimerService: SessionTimerService) {
+
+  }
+
+  // initiate it in your component OnInit
+  ngOnInit(): void {
+    this.sessionTimerService
+      .sessionLogout$.subscribe((isTimedComplted) => {
+      console.log("Call Back From Library", isTimedComplted)
+        // Do it any of the action when getting notified
+       // this.authService.logout(true);
+  })
+  }
+}
+
+```
+
+In the above example, I have invoked the `sessionLogout` Subject when getting notified from Library when timer gone completed and subscribed to the observable, once the user is idle for one minute then the subscribe method will get invoked with the `isTimedComplted` parameter's value (which is a boolean) as `true`.
+
+By checking whether the `isTimedComplted` is true or not, you can do your any action and logout your application.
+
+## VERSION
+
+14.2.12 - Supports all the angular versions till 14.2.12 one.

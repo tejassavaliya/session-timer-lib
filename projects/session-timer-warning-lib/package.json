@@ -1,6 +1,6 @@
 {
   "name": "session-timer-warning-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
@@ -8,5 +8,35 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "Angular user idle detect",
+    "Angular 16 user Session timer warning popup detect",
+    "Angular 14 Session timer warning popup detect",
+    "Ng session timeout warning popup",
+    "Angular session timeout popup",
+    "session timeout",
+    "session timeout popup",
+    "session-timer-warning-lib",
+    "session-timer-warning-lib",
+    "angular session timer warning lib component"
+  ],
+  "description": "Angular session timer warning, session timer warning popup",
+  "license": "MIT",
+  "author": "tejassavaliya",
+  "person": {
+    "name": "Tejas",
+    "email": "tejas14883@gmail.com",
+    "url": "http://tejassavaliya.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tejassavaliya/session-timer-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tejassavaliya/session-timer-lib/issues",
+    "email": "tejas14883@gmail.com"
+  }
 }
+
+

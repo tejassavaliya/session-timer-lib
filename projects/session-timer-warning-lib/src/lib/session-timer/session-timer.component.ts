@@ -23,10 +23,11 @@ export class SessionTimerComponent implements OnInit, OnDestroy {
   /** timer configuration both ways ( using binding below keys with
    *  custom minutes or define default minute in AppConfig configuration)
   //  */
-  // @Input() totalDurationminutes =  2; // AppConfig.totalDurationminutes
-  // @Input() warningDurationMinutes = 1; // AppConfig.warningDurationMinutes;
-  totalDurationminutes =  2;
-  warningDurationMinutes = 1;
+  @Input() totalDurationminutes: any; // AppConfig.totalDurationminutes
+  @Input() warningDurationMinutes: any; // AppConfig.warningDurationMinutes;
+  @Input() isShowTimer: boolean = false;
+  // totalDurationminutes =  2;
+  // warningDurationMinutes = 1;
   countDownDate: any;
   countDownWarningDate: any;
   displayTime:any;
